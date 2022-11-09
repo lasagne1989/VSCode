@@ -24,6 +24,8 @@ def main():
             app = Standard(Config.time_limit, Config.players)
         if Config.mode == "nameless":
             app = Nameless(Config.time_limit, Config.players)
+        #if Config.mode == "chess":
+        #    app = Chess(Config.time_limit, Config.players)
         app.mainloop()
 
 if __name__ == "__main__":

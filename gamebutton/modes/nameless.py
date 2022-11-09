@@ -28,7 +28,6 @@ class Nameless:
         self.press_count = 0
         
         # Pick first player and set up cycle
-        self.player_cycle = []
         self.setup()
     
     def setup(self):
