@@ -1,5 +1,6 @@
 #libraries
 from tkinter import *
+from main import fullscreen
 
 root = Tk()
 
@@ -8,8 +9,10 @@ class landingPage:
         self.master = master
         # Set up screen
         root.config(cursor="none")
-        #root.geometry("320x240")
-        root.attributes('-fullscreen', True)
+        if fullscreen == False:
+            root.geometry("320x240")
+        else:
+            root.attributes('-fullscreen', True)
         root['bg']='grey9'
         
         #Create UI

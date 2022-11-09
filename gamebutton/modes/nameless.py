@@ -6,6 +6,7 @@ from tkinter import *
 #import RPi.GPIO as GPIO
 
 from tools.press import Button
+from main import fullscreen
 
 #from GameButton import sounds
 
@@ -16,8 +17,10 @@ class Nameless:
         self.master = master
         # Set up screen
         root.config(cursor="none")
-        #root.geometry("320x240")
-        root.attributes('-fullscreen', True)
+        if fullscreen == False:
+            root.geometry("320x240")
+        else:
+            root.attributes('-fullscreen', True)
         root['bg']='grey9'
         
         #Create UI

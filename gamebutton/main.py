@@ -9,6 +9,8 @@ from modes.nameless import Nameless
 from landingpage import landingPage
 from IPandWebsockets.opensocket import msg, connected
 
+fullscreen = True
+
 if msg != "next":
     dict = json.loads(msg)
 

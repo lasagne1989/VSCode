@@ -5,7 +5,7 @@ import itertools
 from tkinter import *
 from tools.firstplayer import player_cycle
 #import RPi.GPIO as GPIO
-
+from main import fullscreen
 from tools.press import Button
 
 #from GameButton import sounds
@@ -17,8 +17,10 @@ class Standard:
         self.master = master
         # Set up screen
         root.config(cursor="none")
-        #root.geometry("320x240")
-        root.attributes('-fullscreen', True)
+        if fullscreen == False:
+            root.geometry("320x240")
+        else:
+            root.attributes('-fullscreen', True)
         root['bg']='grey9'
         
         #Create UI
