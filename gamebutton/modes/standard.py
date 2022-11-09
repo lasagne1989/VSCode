@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 
 #libraries
-import random
 import itertools
 from tkinter import *
 from tools.firstplayer import player_cycle

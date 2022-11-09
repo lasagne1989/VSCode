@@ -6,6 +6,7 @@ from dataclasses import dataclass
 #files
 from modes.standard import Standard
 from modes.nameless import Nameless
+from landingpage import landingPage
 from IPandWebsockets.opensocket import msg, connected
 
 if msg != "next":
@@ -19,7 +20,9 @@ class Config:
     dob: list = dict['dob']
 
 def main():
+    
     while connected == True:
+        landingpage.quit
         if Config.mode == "standard":
             app = Standard(Config.time_limit, Config.players)
         if Config.mode == "nameless":
@@ -29,5 +32,7 @@ def main():
         app.mainloop()
 
 if __name__ == "__main__":
+    landingpage = landingPage()
+    landingpage.mainloop()
     main()
 
