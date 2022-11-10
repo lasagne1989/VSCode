@@ -5,6 +5,7 @@ import websockets
 import asyncio
 from tkinter import *
 from tools.myIP import IPAddr
+import gamelauncher
 
 fullscreen = False
 
@@ -16,10 +17,10 @@ class landingPage:
         self.master = master
         # Set up screen
         root.config(cursor="none")
-        if fullscreen == False:
-            root.geometry("320x240")
-        else:
-            root.attributes('-fullscreen', True)
+        #if fullscreen == False:
+        root.geometry("320x240")
+        #else:
+        #    root.attributes('-fullscreen', True)
         root['bg']='grey9'
         self.display1 = Label(master, fg='white', bg='grey9', font=("Ariel", 30), wraplength=318)
         self.display1.place(relx=.5, rely=.5, anchor=S)
@@ -33,7 +34,7 @@ class landingPage:
             self.msg = await websocket.recv()
             start = f"start"
             await websocket.send(start)
-            os.startfile("main.py")
+            gamelauncher.launch()
             app.quit()
         loop = asyncio.new_event_loop()
         asyncio.set_event_loop(loop)
