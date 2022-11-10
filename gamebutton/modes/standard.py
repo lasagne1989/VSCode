@@ -89,3 +89,6 @@ class Standard:
             #Move these above wait?
             self.player = next(self.next_players)
             self.press_count = 1
+
+if __name__ == "__main__":
+        Standard()

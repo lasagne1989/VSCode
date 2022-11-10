@@ -77,3 +77,6 @@ class Nameless:
             # wait for the button to be pressed again
             wait_event = Button(GPIO.IN, GPIO.PUD_DOWN, GPIO.FALLING, self.start)
             wait_event.wait()
+
+if __name__ == "__main__":
+    Nameless()
