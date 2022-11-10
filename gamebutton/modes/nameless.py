@@ -5,7 +5,7 @@ import random
 from tkinter import *
 import RPi.GPIO as GPIO
 
-from modes.tools.press import Button
+from tools.press import Button
 from data import Config
 from main import fullscreen
 
@@ -24,10 +24,11 @@ class Nameless:
             root.attributes('-fullscreen', True)
         root['bg']='grey9'
         self.time_limit = Config.time_limit
+        self.players = Config.players
         #Create UI
         self.display1 = Label(master, fg='white', bg='grey9', font=("Ariel", 35), wraplength=318)
         self.display1.place(relx=.5, rely=.5, anchor=S)
-       
+
         # Press count variable
         self.press_count = 0
         

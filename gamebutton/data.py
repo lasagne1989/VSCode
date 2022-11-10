@@ -1,6 +1,6 @@
 import json
 from dataclasses import dataclass
-from websockets import msg
+from main import msg
 
 if msg != "next":
     dict = json.loads(msg)
