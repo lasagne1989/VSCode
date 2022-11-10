@@ -4,6 +4,9 @@ import websockets
 import asyncio
 from myIP import IPAddr
 
+msg = ""
+connected = False
+
 def sockSVR(self):
     async def handler(websocket):
         msg = await websocket.recv()
