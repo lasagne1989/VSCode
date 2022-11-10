@@ -3,10 +3,10 @@
 #libraries
 import itertools
 from tkinter import *
-from firstplayer import player_cycle
+from modes.tools.firstplayer import player_cycle
 import RPi.GPIO as GPIO
 from main import fullscreen
-from press import Button
+from tools.press import Button
 
 #from GameButton import sounds
 
