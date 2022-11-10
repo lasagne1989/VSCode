@@ -43,5 +43,5 @@ class landingPage:
         loop.run_forever()
 
 if __name__ == "__main__":
-    app = landingPage()
+    app = landingPage(root)
     app.mainloop()
