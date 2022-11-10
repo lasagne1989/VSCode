@@ -14,3 +14,6 @@ def launch():
     #    app = Chess(Config.time_limit, Config.players)
     app.mainloop()
 
+if __name__ == "__main__":
+    launch()
+
