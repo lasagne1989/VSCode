@@ -1,0 +1,6 @@
+{
+    "python.analysis.extraPaths": [
+        "./gamebutton/modes/tools",
+        "./gamebutton/modes"
+    ]
+}
