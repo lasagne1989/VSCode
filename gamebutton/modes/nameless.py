@@ -3,9 +3,9 @@
 #libraries
 import random
 from tkinter import *
-#import RPi.GPIO as GPIO
+import RPi.GPIO as GPIO
 
-from tools.press import Button
+from press import Button
 from main import fullscreen
 
 #from GameButton import sounds

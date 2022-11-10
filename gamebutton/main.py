@@ -4,12 +4,12 @@
 import json
 from dataclasses import dataclass
 #files
-from modes.standard import Standard
-from modes.nameless import Nameless
+from standard import Standard
+from nameless import Nameless
 from landingpage import landingPage
 from IPandWebsockets.opensocket import msg, connected
 
-fullscreen = True
+fullscreen = False
 
 if msg != "next":
     dict = json.loads(msg)
