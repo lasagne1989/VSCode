@@ -4,7 +4,7 @@ import websockets
 import asyncio
 from myIP import IPAddr
 
-msg = ""
+msg = "next"
 connected = False
 
 def sockSVR(self):
