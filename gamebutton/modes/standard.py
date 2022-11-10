@@ -6,14 +6,15 @@ from tkinter import *
 from modes.tools.firstplayer import player_cycle
 import RPi.GPIO as GPIO
 from main import fullscreen
-from tools.press import Button
+from modes.tools.press import Button
+from data import Config
 
 #from GameButton import sounds
 
 root = Tk()
 
 class Standard:
-    def __init__(self, master, time_limit: int = 5, players: list = ["Gordon","Claire","Izzie"]):
+    def __init__(self, master):
         self.master = master
         # Set up screen
         root.config(cursor="none")
@@ -22,7 +23,8 @@ class Standard:
         else:
             root.attributes('-fullscreen', True)
         root['bg']='grey9'
-        
+        self.time_limit = Config.time_limit
+
         #Create UI
         self.display1 = Label(master, fg='white', bg='grey9', font=("Ariel", 24), wraplength=318)
         self.display1.place(relx=.5, rely=.5, anchor=S)
