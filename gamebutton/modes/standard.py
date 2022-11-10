@@ -3,7 +3,7 @@
 #libraries
 import itertools
 from tkinter import *
-from tools.firstplayer import player_cycle
+from tools.firstplayer import firstPlayer
 import RPi.GPIO as GPIO
 from main import fullscreen
 from tools.press import Button
@@ -44,7 +44,7 @@ class Standard:
         reg_event.setup()
         reg_event.event()
         # Pick first player and set up cycle
-        self.next_players = itertools.cycle(player_cycle)    
+        self.next_players = itertools.cycle(firstPlayer.player_cycle)    
     
     def start(self, channel):
         # Show randomised First player on first press
