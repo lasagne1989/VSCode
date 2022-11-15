@@ -5,9 +5,9 @@ import itertools
 from tkinter import *
 from tools.firstplayer import firstPlayer
 import RPi.GPIO as GPIO
-from main import fullscreen
+from tools.fullscreen import fullscreen
 from tools.press import Button
-from data import Config
+from data import Data
 
 #from GameButton import sounds
 
@@ -23,7 +23,7 @@ class Standard:
         else:
             root.attributes('-fullscreen', True)
         root['bg']='grey9'
-        self.time_limit = Config.time_limit
+        self.time_limit = Data.Config.time_limit
 
         #Create UI
         self.display1 = Label(master, fg='white', bg='grey9', font=("Ariel", 24), wraplength=318)

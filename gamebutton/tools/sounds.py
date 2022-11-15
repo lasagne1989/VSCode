@@ -15,3 +15,6 @@ def gimmeSomeBanter():
         selectedFile = PurePosixPath(audioFiles[ramdonChoice])
         #print selectedFile
         subprocess.Popen(("mpg123", str(selectedFile))).wait()
+
+if __name__ == "__main__":
+    gimmeSomeBanter()

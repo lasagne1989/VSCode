@@ -2,14 +2,13 @@
 
 import websockets
 import asyncio
+from threading import Thread
 from tkinter import *
 from tools.myIP import IPAddr
 import gamelauncher
-
-fullscreen = False
+from data import Data
 
 root = Tk()
-
 
 class landingPage:
     def __init__(self, master):
@@ -26,7 +25,7 @@ class landingPage:
         self.display1['text'] = 'Awaiting Phone Connection'
         # Start Websocket
         self.msg = ""
-        self.sockSVR()
+        t = Thread(target=self.sockSVR).start()
 
     def sockSVR(self):
         async def handler(websocket):
@@ -34,7 +33,8 @@ class landingPage:
             start = f"start"
             await websocket.send(start)
             app.quit()
-            gamelauncher.launch()
+            Data()
+            gamelauncher.Launch()
         loop = asyncio.new_event_loop()
         asyncio.set_event_loop(loop)
 

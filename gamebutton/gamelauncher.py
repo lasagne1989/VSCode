@@ -5,7 +5,7 @@ from modes.standard import Standard
 from modes.nameless import Nameless
 from data import Config
 
-def launch():
+def Launch():
     if Config.mode == "standard":
         app = Standard()
     if Config.mode == "nameless":
@@ -15,5 +15,5 @@ def launch():
     app.mainloop()
 
 if __name__ == "__main__":
-    launch()
+    Launch()
 

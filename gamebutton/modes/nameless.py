@@ -4,10 +4,9 @@
 import random
 from tkinter import *
 import RPi.GPIO as GPIO
-
 from tools.press import Button
-from data import Config
-from main import fullscreen
+from data import Data
+from tools.fullscreen import fullscreen
 
 #from GameButton import sounds
 
@@ -23,8 +22,8 @@ class Nameless:
         else:
             root.attributes('-fullscreen', True)
         root['bg']='grey9'
-        self.time_limit = Config.time_limit
-        self.players = Config.players
+        self.time_limit = Data.Config.time_limit
+        self.players = Data.Config.players
         #Create UI
         self.display1 = Label(master, fg='white', bg='grey9', font=("Ariel", 35), wraplength=318)
         self.display1.place(relx=.5, rely=.5, anchor=S)
