@@ -1,15 +1,15 @@
 #!/usr/bin/env python
 
 #files
-from modes.standard import Standard
-from modes.nameless import Nameless
+import modes.standard
+import modes.nameless
 from data import Config
 
 def Launch():
     if Config.mode == "standard":
-        app = Standard()
+        app = modes.standard.Standard()
     if Config.mode == "nameless":
-        app = Nameless()
+        app = modes.nameless.Nameless()
     #if Config.mode == "chess":
     #    app = Chess(Config.time_limit, Config.players)
     app.mainloop()

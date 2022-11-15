@@ -78,4 +78,5 @@ class Nameless:
             wait_event.wait()
 
 if __name__ == "__main__":
-    Nameless()
+    app = Nameless(root)
+    app.mainloop()
