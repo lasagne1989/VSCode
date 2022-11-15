@@ -12,5 +12,5 @@ def firstPlayer():
         player_cycle.append(Data.Config.players[player_num % player_count])
         player_num += 1
 
-#if __name__ == "__main__":
-#    firstPlayer()
+if __name__ == "__main__":
+    firstPlayer()
