@@ -91,5 +91,4 @@ class Standard:
             self.press_count = 1
 
 if __name__ == "__main__":
-    app = Standard(root)
-    app.mainloop()
+    Standard()
