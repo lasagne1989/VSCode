@@ -5,8 +5,6 @@ import asyncio
 from threading import Thread
 from tkinter import *
 from tools.myIP import IPAddr
-import gamelauncher
-import data
 
 root = Tk()
 
@@ -33,6 +31,8 @@ class landingPage:
             start = f"start"
             await websocket.send(start)
             app.quit()
+            import gamelauncher
+            import data
             data.Data()
             gamelauncher.Launch()
         loop = asyncio.new_event_loop()
