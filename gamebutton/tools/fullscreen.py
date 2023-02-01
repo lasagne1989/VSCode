@@ -1,1 +1,1 @@
-fullscreen = False
+is_fullscreen = False
