@@ -4,7 +4,8 @@ import websockets
 import asyncio
 from threading import Thread
 from tkinter import *
-from tools.myIP import IPAddr
+from tools.myIP import getIP
+#from tools.fullscreen import is_fullscreen
 
 root = Tk()
 
@@ -13,7 +14,7 @@ class landingPage:
         self.master = master
         # Set up screen
         root.config(cursor="none")
-        #if fullscreen == False:
+        #if is_fullscreen == False:
         root.geometry("320x240")
         #else:
         #    root.attributes('-fullscreen', True)
@@ -23,6 +24,7 @@ class landingPage:
         self.display1['text'] = 'Awaiting Phone Connection'
         # Start Websocket
         self.msg = ""
+        self.IP_addr = getIP()
         t = Thread(target=self.sockSVR).start()
 
     def sockSVR(self):
@@ -38,7 +40,7 @@ class landingPage:
         loop = asyncio.new_event_loop()
         asyncio.set_event_loop(loop)
 
-        start_server= websockets.serve(handler, "%s"%IPAddr, 8765)
+        start_server= websockets.serve(handler, "%s"%self.IP_addr, 8765)
         loop.run_until_complete(start_server)
         loop.run_forever()
 
