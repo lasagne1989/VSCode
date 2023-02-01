@@ -13,7 +13,7 @@ from tools.press import Button
 
 root = Tk()
 
-class Standard:
+class Chess:
     def __init__(self, master, time_limit: int = 5, players: list = ["Gordon","Claire","Izzie"]):
         self.master = master
         # Set up screen
@@ -88,3 +88,6 @@ class Standard:
             #Move these above wait?
             self.player = next(self.next_players)
             self.press_count = 1
+
+if __name__ == "__main__":
+   Chess()

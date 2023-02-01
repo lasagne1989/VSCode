@@ -22,3 +22,6 @@ class Button:
 
     def wait(self):
         GPIO.wait_for_edge(12, self.fallrise, bouncetime=500)
+
+if __name__ == "__main__":
+    Button()
